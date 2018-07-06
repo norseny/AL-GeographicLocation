@@ -1,0 +1,23 @@
+{
+  "id": "0ff97ac7-8cab-490a-b08a-7c3af4f1fb41",
+  "name": "Geographic Location",
+  "publisher": "Default publisher",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "compatibilityId": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": "11.0.0.0",
+  "idRange": {
+    "from": 50200,
+    "to": 50300
+  }
+}

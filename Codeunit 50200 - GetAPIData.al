@@ -50,7 +50,6 @@ codeunit 50200 GetAPIData
         Location.id := next_id;
         HandleAddressComponentsData(JsonObject);
         HandleGeometryData(JsonObject);
-        Message(Format(Location));
         Location.Insert;
     end;
 

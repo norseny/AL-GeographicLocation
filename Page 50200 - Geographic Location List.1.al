@@ -28,25 +28,19 @@ page 50200 "Geographic Location List"
     {
         area(processing)
         {
-            action(GetAPIData)
+            action(GetAPIDataCity)
             {
-                CaptionML=ENU='Get API Data';
+                CaptionML=ENU='Get API Data - Specific City Information';
                 Promoted=true;
                 PromotedCategory=Process;
                 Image=GetLines;
                 trigger OnAction();
                 begin
-                    GetAPIData();
+                    Report.Run(Report::"Geographic Location Report");
                     CurrPage.Update;
                     if FindFirst then;
                 end;
             }
         }
     }
-
-    trigger OnOpenPage();
-    begin
-        //GetIssues();
-        //if FindFirst then;
-    end;
 }

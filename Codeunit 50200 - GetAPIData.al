@@ -2,7 +2,7 @@ codeunit 50200 GetAPIData
 {
     var
         Location : Record "Geographic Location";
-    procedure Get();
+    procedure Get(City:Text);
     var
         HttpClient : HttpClient;
         ResponseMessage : HttpResponseMessage;
@@ -12,11 +12,13 @@ codeunit 50200 GetAPIData
         JsonArray : JsonArray;
         JsonText : text;
         next_id : Integer;
-    begin
+        url : Text[250];
+    begin    
 
         // Web service call
-        if not HttpClient.Get('https://maps.googleapis.com/maps/api/geocode/json?address=Gdańsk',
-                              ResponseMessage)
+        url := 'https://maps.googleapis.com/maps/api/geocode/json?address=' + City;
+        //if not HttpClient.Get('https://maps.googleapis.com/maps/api/geocode/json?address=London',
+        if not HttpClient.Get(url, ResponseMessage)
         then
             Error('The call to the web service failed.');
 

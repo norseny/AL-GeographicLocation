@@ -51,12 +51,4 @@ table 50200 "Geographic Location"
         {
         }
     }
-
-    procedure GetAPIData();
-    var
-        GetAPIData :Codeunit GetAPIData;
-    begin
-        GetAPIData.Get();
-    end;
-
 }
